@@ -223,9 +223,9 @@ def indicatorNever() {
 def fixRampRate() {
 	log.debug("Fixing ramp rate")
     delayBetween([
-        zwave.configurationV1.configurationSet(configurationValue: [1], parameterNumber: 7, size: 1).format(),
+        zwave.configurationV1.configurationSet(configurationValue: [99], parameterNumber: 7, size: 1).format(),
         zwave.configurationV1.configurationSet(configurationValue: [1], parameterNumber: 8, size: 1).format(),
-        zwave.configurationV1.configurationSet(configurationValue: [1], parameterNumber: 9, size: 1).format(),
+        zwave.configurationV1.configurationSet(configurationValue: [99], parameterNumber: 9, size: 1).format(),
         zwave.configurationV1.configurationSet(configurationValue: [1], parameterNumber: 10, size: 1).format()
     ], 500)
 }
